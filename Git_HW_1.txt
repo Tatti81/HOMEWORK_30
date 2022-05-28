@@ -1,0 +1,348 @@
+GIT Homework 1
+
+Для выполнения задания у вас должен быть установлен для Windows - GitBash.
+Создан аккаунт в GitHub
+
+JSON
+ 4. Создать внешний репозиторий c названием JSON. - Yuor repositories/new/repository name:JSON/public/add a readme file/create repository
+ 
+ 5. Клонировать репозиторий JSON на локальный компьютер. - code/clone https (копируем ссылку)/git bash here/ git clone https://github.com/Tatti81/JSON.git
+ Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github
+$ git clone https://github.com/Tatti81/JSON.git
+Cloning into 'JSON'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+ 6. Внутри локального JSON создать файл “new.json”. - cd JSON (входим в репозиторий)/ touch new.json
+ Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github
+$ cd JSON
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ touch new.json
+
+ 7. Добавить файл под гит. - git status/ git add new.json/git status
+ Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new.json
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ git add new.json
+
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   new.json
+
+ 8. Закоммитить файл. -  git commit -m "add a new JSON file"
+ Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ git commit -m "add a new JSON file"
+[main 861b1bf] add a new JSON file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.json
+
+ 9. Отправить файл на внешний GitHub репозиторий. - git push
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 283 bytes | 283.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Tatti81/JSON.git
+   c1bc615..861b1bf  main -> main
+
+ 10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON. - cat >> new.json/ctrl C
+ Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ cat >> new.json
+{"ФИО" : "Баранова Татьяна Олеговна",
+"возраст" : 100,
+"количество домашних животных" : 2,
+"будущая желаемая зарплата" : "от 500 условных и выше со старта"
+}
+
+ 11. Отправить изменения на внешний репозиторий. - git status/ git add/git status/git commit -m "_'/git push
+ Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   new.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ git add new.json
+warning: LF will be replaced by CRLF in new.json.
+The file will have its original line endings in your working directory
+
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   new.json
+
+
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ git commit -m "add information in the JSON file"
+[main 9aaba04] add information in the JSON file
+ 1 file changed, 5 insertions(+)
+
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 464 bytes | 464.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Tatti81/JSON.git
+   861b1bf..9aaba04  main -> main
+
+ 12. Создать файл preferences.json - touch preferences.json
+
+ 13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON. - cat >> preferences.json/ctrl C
+ Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ cat >> preferences.json
+{"Любимый фильм" : "Девушка с татуировкой дракона",
+"любимый сериал" : "Доктор Хаус",
+"любимая еда" : "что угодно на гриле",
+"любимое время года" : "весна",
+"сторона которую хотели бы посетить" : "Французская Полинезия"
+}
+
+ 14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON =  touch sklls.json/cat >> sklls.json/ctrl C
+ Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ touch sklls.json
+
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ cat >> sklls.json
+{"терминал" : " Git bash",
+"распределенная система контроля версий кода" : "Git",
+"сервис для хостинга репозиториев" : "GitHub",
+"ЯП" : "JS",
+"Автоматизация" : "Postman"
+}
+
+ 15. Отправить сразу 2 файла на внешний репозиторий. git status/ git add . (все файлы добавит) по одному  git add preferences.json  git add sklls.json/git status/git commit -m "add two JSON files"/git push
+ Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ git commit -m "add two JSON files"
+[main 9fa25f9] add two JSON files
+ 2 files changed, 12 insertions(+)
+ create mode 100644 preferences.json
+ create mode 100644 sklls.json
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 756 bytes | 756.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Tatti81/JSON.git
+   9aaba04..9fa25f9  main -> main
+
+ 16. На веб интерфейсе создать файл bug_report.json. - add file/create new file/ввести название файла/commit new file
+ 
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе. - commit new file
+
+ 18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.  - выбрать файл bug_report.json/edit this file/добавить баг - репорт в формате json/commit changes
+ 
+ 19. Сделать Commit changes (сохранить) изменения на веб интерфейсе. - Commit changes
+ 
+20. Синхронизировать внешний и локальный репозиторий JSON - git fetch/git pull
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ git fetch
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.55 KiB | 105.00 KiB/s, done.
+From https://github.com/Tatti81/JSON
+   9fa25f9..9d7bc93  main       -> origin/main
+
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/JSON (main)
+$ git pull
+Updating 9fa25f9..9d7bc93
+Fast-forward
+ bug_report.json | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+ create mode 100644 bug_report.json
+
+
+XML
+ 21. Создать внешний репозиторий c названием XML. - Yuor repositories/new/repository name:XML/public/add a readme file/create repository
+ 
+ 22. Клонировать репозиторий XML на локальный компьютер. - code/clone https (копируем ссылку)/git bash here/ git clone https://github.com/Tatti81/XML.git
+  
+ 23. Внутри локального XML создать файл “new.xml”. - cd XML (входим в репозиторий)/ touch new.xml
+ 
+ 24. Добавить файл под гит. - git status/ git add new.xml/git status
+ 
+ 25. Закоммитить файл. - git commit -m "add a new XML file"
+ 
+ 26. Отправить файл на внешний GitHub репозиторий. - git push
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/XML (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 278 bytes | 278.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Tatti81/XML.git
+   930469b..d7c4b32  main -> main
+
+ 27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML. - cat >> new.xml/ctrl C
+ 
+ 28. Отправить изменения на внешний репозиторий. - git status/ git add/git status/git commit -m "_'/git push
+ Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/XML (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 497 bytes | 497.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Tatti81/XML.git
+   d7c4b32..0eb585c  main -> main
+
+ 29. Создать файл preferences.xml - touch preferences.xml
+
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML. - cat >> preferences.xml/ctrl C
+ 
+ 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML - touch sklls.xml/cat >> sklls.xml/ctrl C
+ 
+ 32. Сделать коммит в одну строку. - git status/git add ./git status/git commit -m "_"
+ 
+ 33. Отправить сразу 2 файла на внешний репозиторий. - git push
+ Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/XML (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 842 bytes | 842.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Tatti81/XML.git
+   0eb585c..51be865  main -> main
+ 
+ 34. На веб интерфейсе создать файл bug_report.xml. - add file/create new file/ввести название файла/commit new file
+
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе. - commit new file
+
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML. - выбрать файл bug_report.xml/edit this file/добавить баг - репорт в формате xml/commit changes
+
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе. - Commit changes
+
+ 38. Синхронизировать внешний и локальный репозиторий XML - git fetch/git pull
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/XML (main)
+$ git fetch
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.63 KiB | 97.00 KiB/s, done.
+From https://github.com/Tatti81/XML
+   51be865..fd9f0d4  main       -> origin/main
+
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/XML (main)
+$ git pull
+Updating 51be865..fd9f0d4
+Fast-forward
+ bug_report.xml | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+ create mode 100644 bug_report.xml
+
+
+TXT
+ 1. Создать внешний репозиторий c названием TXT.- Yuor repositories/new/repository name:TXT/public/add a readme file/create repository
+ 
+ 2. Клонировать репозиторий TXT на локальный компьютер.- code/clone https (копируем ссылку)/git bash here/ git clone https://github.com/Tatti81/TXT.git
+ 
+ 3. Внутри локального TXT создать файл “new.txt”. - cd TXT (входим в репозиторий)/ touch new.txt
+ 
+ 4. Добавить файл под гит. -git status/ git add new.txt/git status
+
+ 5. Закоммитить файл. - git commit -m "add a new TXT file"
+
+ 6. Отправить файл на внешний GitHub репозиторий. - git push
+
+ 7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT. - cat >> new.txt/ctrl C
+
+ 8. Отправить изменения на внешний репозиторий. - git status/ git add/git status/git commit -m "add information in the TXT file"/git push
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/TXT (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 456 bytes | 456.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Tatti81/TXT.git
+   c3f2ec7..0045a06  main -> main
+
+ 9. Создать файл preferences.txt - touch preferences.txt
+
+ 10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT. - cat >> preferences.txt/ctrl C
+ 
+ 11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT - - touch sklls.txt/cat >> sklls.txt/ctrl C
+ 
+ 12. Сделать коммит в одну строку.- git status/git add ./git status/git commit -m "add 2 TXT files"
+
+ 13. Отправить сразу 2 файла на внешний репозиторий. - git push
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/TXT (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 740 bytes | 740.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Tatti81/TXT.git
+   0045a06..1e8a19c  main -> main
+
+ 14. На веб интерфейсе создать файл bug_report.txt. - - add file/create new file/ввести название файла/commit new file
+
+ 
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе. -commit new file
+
+ 16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT. - - выбрать файл bug_report.txt/edit this file/добавить баг - репорт в формате txt/commit changes
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе. - commit changes
+ 18. Синхронизировать внешний и локальный репозиторий TXT - git fetch/git pull
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/TXT (main)
+$ git fetch
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.56 KiB | 66.00 KiB/s, done.
+From https://github.com/Tatti81/TXT
+   1e8a19c..b537b4b  main       -> origin/main
+
+Tatiana@DESKTOP-35BA3H6 MINGW64 /d/Testing github/TXT (main)
+$ git pull
+Updating 1e8a19c..b537b4b
+Fast-forward
+ bug_report.txt | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+ create mode 100644 bug_report.txt
